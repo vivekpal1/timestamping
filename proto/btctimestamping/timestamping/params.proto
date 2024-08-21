@@ -1,0 +1,15 @@
+syntax = "proto3";
+package btctimestamping.timestamping;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "btc-timestamping/x/timestamping/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "btctimestamping/x/timestamping/Params";
+  option (gogoproto.equal) = true;
+
+  
+}
