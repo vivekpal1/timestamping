@@ -1,0 +1,17 @@
+syntax = "proto3";
+package btctimestamping.btctimestamping;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "btctimestamping/btctimestamping/params.proto";
+
+option go_package = "btc-timestamping/x/btctimestamping/types";
+
+// GenesisState defines the btctimestamping module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}
